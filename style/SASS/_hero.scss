@@ -1,0 +1,86 @@
+.section .hero{
+    padding-top: 33px;
+    padding-bottom: 58px;
+
+    @media screen and (min-width:1600px){
+        padding-top: 140px;
+        padding-bottom: 71px;
+    }
+}
+
+.johns-photo{
+    width: 243px;
+    height: 243px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 44px;
+    
+}
+
+@media screen and (min-width:1600px){
+    .hero .container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .hero-text-container{
+        width: 500px;
+    }
+}
+
+h1{
+    color: $primaryTextColor;
+
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+
+    margin-bottom: 21px;
+
+    @media screen and (min-width:1600px){
+        text-align:start;
+    }
+}
+
+.hero-description{
+    color: $primaryTextColor;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-bottom: 27px;
+
+    @media screen and (min-width:1600px){
+        text-align:start;
+    }
+}
+
+.hero-button{
+    display: block;
+    
+    color:  $backgroundColor;
+    background-color: $buttonBackgroundColor;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+
+    border: 0;
+    border-radius: 2px;
+
+    padding: 13px 20px;
+    padding-bottom: 17px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width:1600px){
+        display: block;
+
+        margin-left: 0;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,32 @@
+footer{
+    padding: 52px 71px;
+}
+
+.social-networks-list{
+    display: flex;
+
+     justify-content: center;
+     align-items: center;
+}
+
+.social-networks-list .list-item:not(:first-child){
+    margin-left: 35px;
+}
+
+.social-network-link{
+    color: $primaryTextColor;
+}
+
+.social-network{
+    fill: $primaryTextColor;
+}
+
+footer p{
+    color: $primaryTextColor;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+
+}
