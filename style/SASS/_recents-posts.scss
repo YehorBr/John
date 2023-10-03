@@ -16,36 +16,45 @@
     @media screen and (min-width:1600px){
         text-align:start;
     }
+}
 
+.articles-list{                                                
     @media screen and (min-width:1600px){
-        .articles-list{
+        
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .articles-list .list-item article{
-            width: 418px;
+        & .list-item{
+            width: 420px;
         }
-    }
+
+        & .list-item:not(:first-child){
+            margin-left: 20px;
+        }
 }
 
-
-
-article{
+article{    
     background-color: $backgroundColor;
+
+    text-align: center;
 
     border-radius: 4px;
     box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
 
-    padding: 12px 20px 22px 20px;
+    padding: 12px 20px 20px 20px;
 }
 
 article:not(:last-child){
     margin-bottom: 17px;
+
+    @media screen and (min-width:1600px) {
+        margin-bottom: 0;
+     }   
 }
 
-article h3{
+.articles-list h3{
     color: $primaryTextColor;
 
     font-size: 22px;
@@ -57,6 +66,10 @@ article h3{
 .date{
     display: flex;
     margin-bottom: 21px;
+}
+
+.line{
+    margin: 0 24px;
 }
 
 .posts-text{

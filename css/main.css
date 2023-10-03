@@ -178,8 +178,9 @@ h1 {
     text-align: start;
   }
 }
+
 @media screen and (min-width: 1600px) {
-  .recent-posts h2 .articles-list {
+  .articles-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -190,24 +191,33 @@ h1 {
         -ms-flex-align: center;
             align-items: center;
   }
-  .recent-posts h2 .articles-list .list-item article {
-    width: 418px;
-  }
+}
+.articles-list .list-item {
+  width: 420px;
+}
+.articles-list .list-item:not(:first-child) {
+  margin-left: 20px;
 }
 
 article {
   background-color: #FFF;
+  text-align: center;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
           box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
-  padding: 12px 20px 22px 20px;
+  padding: 12px 20px 20px 20px;
 }
 
 article:not(:last-child) {
   margin-bottom: 17px;
 }
+@media screen and (min-width: 1600px) {
+  article:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 
-article h3 {
+.articles-list h3 {
   color: #21243D;
   font-size: 22px;
   font-weight: 700;
@@ -220,6 +230,10 @@ article h3 {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 21px;
+}
+
+.line {
+  margin: 0 24px;
 }
 
 .posts-text {
@@ -269,6 +283,16 @@ article h3 {
   }
 }
 
+@media screen and (min-width: 375px) {
+  .desktop-list-item {
+    display: none;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .desktop-list-item {
+    display: block;
+  }
+}
 .works-title {
   color: #21243D;
   font-size: 24px;
@@ -330,6 +354,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 30px;
 }
 
 .social-networks-list .list-item:not(:first-child) {
