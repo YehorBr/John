@@ -1,69 +1,85 @@
-@media screen and (min-width:1600px){
 header{
+  @media screen and (min-width:1600px){
     padding-top: 27px;
+}
+}
+
+.container.header {
+  position: relative;
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px){
+    justify-content: space-between;
+  }
 }
 
 .menu-button{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  background-color: transparent;
+  border: none;
+
+  z-index: 5;
+
+  @media screen and (min-width:$tablet){
+    display: none;
+  }
+}
+
+.menu-button.is-open .close-icon{
+  display: block;
+}
+
+.menu-button.is-open .open-icon{
+  display: none;
+}
+
+.menu-icon{
+  fill: black;
+}
+
+.mobile-menu{
+  @media screen and (max-width: 767px) {
+    display: none;
     position: absolute;
+    z-index: 4;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left:0;
+    width: 480px;
+    height: 796px;
+    
+    padding: 48px ;
 
-    background-color: transparent;
-    border: none;
+    background-color: $backgroundColor;
+    
+  }
 
-    z-index: 5;
+  &.is-open{
+    display: flex;
+  }
+}
 
-    @media screen and (min-width:1600px){
-      display: none;
-    }
-  }
-  
-  .menu-button.is-open .close-icon{
-    display: block;
-  }
-  
-  .menu-button.is-open .open-icon{
-    display: none;
-  }
-  
-  .menu-icon{
-    fill: black;
-  }
-  
-  .mobile-menu{
-    @media screen and (max-width: 1599px) {
-      display: none;
-      position: absolute;
-      flex-direction: column;
-      justify-content: space-between;
-      top: 0;
-      left:0;
-      width: 480px;
-      height: 796px;
-      
-      padding: 48px ;
-  
-      background-color: $backgroundColor;
-  
-    }
-
-    &.is-open{
-      display: flex;
-    }
-  }
-  
-  .close-icon{
-    display: none;
-  }
+.close-icon{
+  display: none;
+}
 
 .nav-list{
     display: flex;
     justify-content: end;
     align-items: center;
 
-    & .list-item:nth-child(n+2){
+    & .nav-item:not(:first-child){
         margin-left: 33px;
     }
     
 }
+
 
 .nav-link{
     color:  $headerTextColor;
@@ -77,5 +93,4 @@ header{
     }
 }
 
-}
 
