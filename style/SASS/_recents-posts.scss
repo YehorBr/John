@@ -33,7 +33,14 @@
             margin-left: 20px;
         
         }
-    }    
+        
+    }
+    
+    @media screen and (max-width:767px){
+        & .list-item:not(:first-child){
+           margin-top: 17px; 
+        }
+    }
 }
 
 article{    

@@ -257,6 +257,11 @@ h1 {
     margin-left: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .articles-list .list-item:not(:first-child) {
+    margin-top: 17px;
+  }
+}
 
 article {
   background-color: #FFF;
